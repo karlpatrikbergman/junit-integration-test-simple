@@ -3,7 +3,9 @@ package se.patrikbergman.java.bandapplication.service;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
 import se.patrikbergman.java.configuration.environment.Domain;
 import se.patrikbergman.java.configuration.environment.Environment;
@@ -35,6 +37,9 @@ public class BandBeanIT {
 	public static final DataSourceConfiguration dataSourceConfiguration = new DataSourceConfiguration(BandBeanIT.class,
 			BandBeanIT.environment);
 
+	@Rule
+	public TestName testName = new TestName();
+
 	private static BandBean bandBean;
 
 	@BeforeClass
@@ -45,21 +50,21 @@ public class BandBeanIT {
 
 	@Test
 	public void executeEuropeDataSourceDependentMethod() {
-		System.out.println(String.format("%s: executeEuropeDataSourceDependentCommand()", className));
+		System.out.println(String.format("%s: %s()", className, testName.getMethodName()));
 		assertNotNull(europeDataSource);
 		bandBean.europeDataSourceDependentMethod();
 	}
 
 	@Test
 	public void executeNorthAmericaDataSourceDependentMethod() {
-		System.out.println(String.format("%s: executeNorthAmericaDataSourceDependentCommand()", className));
+		System.out.println(String.format("%s: %s()", className, testName.getMethodName()));
 		assertNotNull(northAmericaDataSource);
 		bandBean.northAmericaDataSourceDependentMethod();
 	}
 
 	@Test
 	public void executeAsiaDataSourceDependentMethod() {
-		System.out.println(String.format("%s: executeAsiaDataSourceDependentCommand()", className));
+		System.out.println(String.format("%s: %s()", className, testName.getMethodName()));
 		assertNotNull(asiaDataSource);
 		bandBean.asiaDataSourceDependentMethod();
 	}
