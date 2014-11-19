@@ -10,17 +10,17 @@ public class BandBean {
 	private final DataSource asiaDataSource;
 
 	public BandBean(final DataSource europeDataSource, final DataSource northAmericaDataSource, final DataSource asiaDataSource) {
-		Preconditions.checkNotNull(europeDataSource, getInitializationError(europeDataSource));
-		Preconditions.checkNotNull(northAmericaDataSource, getInitializationError(northAmericaDataSource));
-		Preconditions.checkNotNull(asiaDataSource, getInitializationError(asiaDataSource));
+		Preconditions.checkNotNull(europeDataSource, getInitializationError());
+		Preconditions.checkNotNull(northAmericaDataSource, getInitializationError());
+		Preconditions.checkNotNull(asiaDataSource, getInitializationError());
 
 		this.europeDataSource = europeDataSource;
 		this.northAmericaDataSource = northAmericaDataSource;
 		this.asiaDataSource = asiaDataSource;
 	}
 
-	private String getInitializationError(final DataSource dataSource) {
-		return String.format("Failed to initialize BandBean. %s cannot be null", dataSource);
+	private String getInitializationError() {
+		return String.format("Failed to initialize %. %s cannot be null", className, DataSource.class.getSimpleName());
 	}
 
 	public void europeDataSourceDependentMethod() {
