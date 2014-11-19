@@ -1,9 +1,9 @@
-package se.patrikbergman.java.configuration.environment;
+package se.patrikbergman.java.test.configuration.environment;
 
 public enum Domain {
-	EU("Europe"),
-	NA("North America"),
-	AS("Asia");
+	EU("europe"),
+	NA("north-america"),
+	AS("asia");
 
 	private final String name;
 

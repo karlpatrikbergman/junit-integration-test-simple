@@ -7,11 +7,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
-import se.patrikbergman.java.configuration.environment.Domain;
-import se.patrikbergman.java.configuration.environment.Environment;
-import se.patrikbergman.java.configuration.environment.TestExecutionEnvironment;
-import se.patrikbergman.java.configuration.rule.DataSourceConfiguration;
-import se.patrikbergman.java.configuration.rule.annotations.DataSourceDomain;
+import se.patrikbergman.java.test.configuration.environment.Domain;
+import se.patrikbergman.java.test.configuration.environment.Environment;
+import se.patrikbergman.java.test.configuration.environment.TestExecutionEnvironment;
+import se.patrikbergman.java.test.configuration.rule.DataSourceConfiguration;
+import se.patrikbergman.java.test.configuration.rule.annotations.DataSourceDomain;
 
 import static org.junit.Assert.assertNotNull;
 

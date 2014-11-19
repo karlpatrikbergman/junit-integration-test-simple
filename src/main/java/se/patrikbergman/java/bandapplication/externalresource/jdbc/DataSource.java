@@ -1,6 +1,7 @@
 package se.patrikbergman.java.bandapplication.externalresource.jdbc;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Preconditions;
 
 public class DataSource {
 	private final String driverName;
@@ -62,31 +63,37 @@ public class DataSource {
 		}
 
 		public Builder driverName(String driverName) {
+			Preconditions.checkNotNull(driverName, "Driver name cannot be null");
 			this.driverName = driverName;
 			return this;
 		}
 
 		public Builder serverDnsName(String serverDnsName) {
+			Preconditions.checkNotNull(serverDnsName, "Server dns name cannot be null");
 			this.serverDnsName = serverDnsName;
 			return this;
 		}
 
 		public Builder portNumber(String portNumber) {
+			Preconditions.checkNotNull(portNumber, "Port number cannot be null");
 			this.portNumber = portNumber;
 			return this;
 		}
 
 		public Builder serviceName(String serviceName) {
+			Preconditions.checkNotNull(serviceName, "Service name cannot be null");
 			this.serviceName = serviceName;
 			return this;
 		}
 
 		public Builder userName(String userName) {
+			Preconditions.checkNotNull(userName, "User name cannot be null");
 			this.userName = userName;
 			return this;
 		}
 
 		public Builder password(String password) {
+			Preconditions.checkNotNull(password, "Password cannot be null");
 			this.password = password;
 			return this;
 		}

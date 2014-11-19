@@ -1,13 +1,14 @@
-package se.patrikbergman.java.configuration.rule;
+package se.patrikbergman.java.test.configuration.rule;
 
 import com.google.common.base.Preconditions;
 import org.junit.rules.ExternalResource;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
-import se.patrikbergman.java.configuration.dependencies.DataSourceFactory;
-import se.patrikbergman.java.configuration.environment.Domain;
-import se.patrikbergman.java.configuration.environment.Environment;
-import se.patrikbergman.java.configuration.rule.annotations.DataSourceDomain;
+import se.patrikbergman.java.test.configuration.factory.DataSourceFactory;
+import se.patrikbergman.java.test.configuration.environment.Domain;
+import se.patrikbergman.java.test.configuration.environment.Environment;
+import se.patrikbergman.java.test.configuration.rule.annotations.DataSourceDomain;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +49,7 @@ public class DataSourceConfiguration extends ExternalResource {
 //	}
 
 	@Override
-	public void before() throws IllegalAccessException {
+	public void before() throws IllegalAccessException, IOException {
 		System.out.println(String.format("%s: before(): Set data sources according to data source field annotations in %s and test execution " +
 				"environment '%s'", className, target.getSimpleName(), environment));
 

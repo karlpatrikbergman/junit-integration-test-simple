@@ -1,4 +1,4 @@
-package se.patrikbergman.java.configuration.environment;
+package se.patrikbergman.java.test.configuration.environment;
 
 import se.patrikbergman.java.utility.resource.ResourceProperties;
 

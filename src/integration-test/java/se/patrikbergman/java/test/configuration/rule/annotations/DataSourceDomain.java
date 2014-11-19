@@ -1,6 +1,6 @@
-package se.patrikbergman.java.configuration.rule.annotations;
+package se.patrikbergman.java.test.configuration.rule.annotations;
 
-import se.patrikbergman.java.configuration.environment.Domain;
+import se.patrikbergman.java.test.configuration.environment.Domain;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
