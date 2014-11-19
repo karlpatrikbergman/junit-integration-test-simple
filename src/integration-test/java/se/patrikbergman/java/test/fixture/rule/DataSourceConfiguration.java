@@ -3,9 +3,9 @@ package se.patrikbergman.java.test.fixture.rule;
 import com.google.common.base.Preconditions;
 import org.junit.rules.ExternalResource;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
-import se.patrikbergman.java.test.fixture.factory.DataSourceFactory;
 import se.patrikbergman.java.test.fixture.domain.Domain;
 import se.patrikbergman.java.test.fixture.environment.Environment;
+import se.patrikbergman.java.test.fixture.factory.DataSourceFactory;
 import se.patrikbergman.java.test.fixture.rule.annotations.DataSourceDomain;
 
 import java.io.IOException;
@@ -27,26 +27,6 @@ public class DataSourceConfiguration extends ExternalResource {
 		this.target = target;
 		this.environment = environment;
 	}
-
-//	@Override
-//	public Statement apply(final Statement base, final Description description) {
-//		System.out.println(String.format("In %s apply", className));
-//		return new Statement() {
-//			@Override
-//			public void evaluate() throws Throwable {
-//				for (Field f : target.getFields()) {
-//					if (f.isAnnotationPresent(DataSourceDomain.class)) {
-//						final DataSourceDomain dataSourceDomain = f.getAnnotation(DataSourceDomain.class);
-//						final Domain domain = dataSourceDomain.domain();
-//						final DataSource dataSource = DataSourceFactory.createDataSource(Environment.DEV, domain);
-//						f.set(target, dataSource);
-//						dataSources.add(dataSource);
-//					}
-//				}
-//				base.evaluate();
-//			}
-//		};
-//	}
 
 	@Override
 	public void before() throws IllegalAccessException, IOException {
