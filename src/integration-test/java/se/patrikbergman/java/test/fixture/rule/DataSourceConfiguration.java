@@ -1,12 +1,12 @@
-package se.patrikbergman.java.test.configuration.rule;
+package se.patrikbergman.java.test.fixture.rule;
 
 import com.google.common.base.Preconditions;
 import org.junit.rules.ExternalResource;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
-import se.patrikbergman.java.test.configuration.factory.DataSourceFactory;
-import se.patrikbergman.java.test.configuration.environment.Domain;
-import se.patrikbergman.java.test.configuration.environment.Environment;
-import se.patrikbergman.java.test.configuration.rule.annotations.DataSourceDomain;
+import se.patrikbergman.java.test.fixture.factory.DataSourceFactory;
+import se.patrikbergman.java.test.fixture.domain.Domain;
+import se.patrikbergman.java.test.fixture.environment.Environment;
+import se.patrikbergman.java.test.fixture.rule.annotations.DataSourceDomain;
 
 import java.io.IOException;
 import java.lang.reflect.Field;

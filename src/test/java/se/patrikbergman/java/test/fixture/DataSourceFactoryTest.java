@@ -1,12 +1,12 @@
-package se.patrikbergman.java.test.configuration;
+package se.patrikbergman.java.test.fixture;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
-import se.patrikbergman.java.test.configuration.factory.DataSourceFactory;
-import se.patrikbergman.java.test.configuration.environment.Domain;
-import se.patrikbergman.java.test.configuration.environment.Environment;
+import se.patrikbergman.java.test.fixture.factory.DataSourceFactory;
+import se.patrikbergman.java.test.fixture.domain.Domain;
+import se.patrikbergman.java.test.fixture.environment.Environment;
 import se.patrikbergman.java.utility.JsonString;
 
 import java.io.IOException;

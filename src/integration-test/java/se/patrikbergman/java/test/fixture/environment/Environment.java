@@ -1,4 +1,4 @@
-package se.patrikbergman.java.test.configuration.environment;
+package se.patrikbergman.java.test.fixture.environment;
 
 public enum Environment {
 	DEV("dev"),
