@@ -8,7 +8,7 @@ import java.util.Properties;
 public class EnvResourceLoader {
 
 	public static Properties readEnvProperties(final Environment environment) throws IOException {
-		final String propertiesFileName = environment.getName() + "-evironment.properties";
+		final String propertiesFileName = environment.getName() + "-environment.properties";
 		return new ResourceProperties(propertiesFileName).getProperties();
 	}
 }
