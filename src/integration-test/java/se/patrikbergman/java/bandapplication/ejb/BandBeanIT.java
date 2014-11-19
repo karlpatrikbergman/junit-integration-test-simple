@@ -1,4 +1,4 @@
-package se.patrikbergman.java.bandapplication.service;
+package se.patrikbergman.java.bandapplication.ejb;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -44,7 +44,8 @@ public class BandBeanIT {
 
 	@BeforeClass
 	public static void setup() {
-		System.out.println(String.format("%s: @BeforeClass: Instantiate BandBean with data sources", className));
+		System.out.println(String.format("%s: @BeforeClass: Instantiate %s with data sources", className,
+				BandBean.class.getSimpleName()));
 		bandBean = new BandBean(europeDataSource, northAmericaDataSource, asiaDataSource);
 	}
 

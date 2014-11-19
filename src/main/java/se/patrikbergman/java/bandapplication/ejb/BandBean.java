@@ -1,4 +1,4 @@
-package se.patrikbergman.java.bandapplication.service;
+package se.patrikbergman.java.bandapplication.ejb;
 
 import com.google.common.base.Preconditions;
 import se.patrikbergman.java.bandapplication.externalresource.jdbc.DataSource;
@@ -20,7 +20,7 @@ public class BandBean {
 	}
 
 	private String getInitializationError() {
-		return String.format("Failed to initialize %. %s cannot be null", className, DataSource.class.getSimpleName());
+		return String.format("Failed to initialize %s. %s cannot be null", className, DataSource.class.getSimpleName());
 	}
 
 	public void europeDataSourceDependentMethod() {
