@@ -11,7 +11,7 @@ import java.util.Properties;
 public final class DataSourceFactory {
 
 	public static DataSource createDataSource(final Environment environment, final Domain domain) throws IOException, IOException {
-		final Properties properties = new EnvironmentProperties(environment).getProperties();
+		final Properties properties = new EnvironmentProperties(environment);
 		final String domainName = domain.getName();
 		return new DataSource.Builder()
 				.serverDnsName(properties.getProperty(domainName + ".datasource.server.dns.name"))

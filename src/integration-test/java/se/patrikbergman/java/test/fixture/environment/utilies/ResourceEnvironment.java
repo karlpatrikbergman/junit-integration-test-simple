@@ -20,7 +20,7 @@ public class ResourceEnvironment {
 
 	public ResourceEnvironment(final String resourceOnClassPath) {
 		try {
-			final Properties prop = new ResourceProperties(resourceOnClassPath).getProperties();
+			final Properties prop = new ResourceProperties(resourceOnClassPath);
 			final String environmentValue = getValue(prop, ENVIRONMENT_KEY);
 			this.environment = Environment.fromValue(environmentValue);
 		}catch (IOException exception) {
