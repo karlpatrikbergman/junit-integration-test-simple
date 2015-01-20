@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Maven
 target/
 pom.xml.tag
@@ -18,3 +19,17 @@ release.properties
 
 # Mac
 .DS_Store
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> a1c1a9ec26ee23a2256c7d28214693e7cda7b3db
